@@ -3,6 +3,9 @@ interval = null;
 pr_interval = 1.0; // for purposes of this app, 'normal' is 1.0
 
 function beat($la, $ra, $lv, $rv) {
+  var deoxyColor  = "#A83472";
+  var oxyColor    = "#D13B3B";
+
   var laInRate        = parseInt(200 * (rate / 800));
   var laOutRate       = parseInt(400 * (rate / 800));
   var laOutRatePR     = parseInt(laOutRate * pr_interval);
@@ -23,22 +26,22 @@ function beat($la, $ra, $lv, $rv) {
   var raTimeout = parseInt(150 * (rate / 800) + laOutRatePRDiff);
   var rvTimeout = parseInt(225 * (rate / 800) + laOutRatePRDiff + raOutRatePRDiff);
 
-  $la.animate({backgroundColor: "#82416D"}, laInRate);
-  $la.animate({backgroundColor: "#999"}, laOutRatePR);
+  $la.animate({backgroundColor: deoxyColor}, laInRate);
+  $la.animate({backgroundColor: "#383838"}, laOutRatePR);
 
   setTimeout(function() {
-    $lv.animate({backgroundColor: "#82416D"}, lvInRate);
-    $lv.animate({backgroundColor: "#999"}, lvOutRate);
+    $lv.animate({backgroundColor: deoxyColor}, lvInRate);
+    $lv.animate({backgroundColor: "#383838"}, lvOutRate);
   }, lvTimeout);
 
   setTimeout(function() {
-    $ra.animate({backgroundColor: "#C93030"}, raInRate);
-    $ra.animate({backgroundColor: "#999"}, raOutRatePR);
+    $ra.animate({backgroundColor: oxyColor}, raInRate);
+    $ra.animate({backgroundColor: "#383838"}, raOutRatePR);
   }, raTimeout);
 
   setTimeout(function() {
-    $rv.animate({backgroundColor: "#C93030"}, rvInRate);
-    $rv.animate({backgroundColor: "#999"}, rvOutRate);
+    $rv.animate({backgroundColor: oxyColor}, rvInRate);
+    $rv.animate({backgroundColor: "#383838"}, rvOutRate);
   }, rvTimeout);
 }
 

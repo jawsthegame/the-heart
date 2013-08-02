@@ -1,5 +1,5 @@
 body {
-  background-color: #444;
+  background-color: #333;
   position:         relative;
   font-family:      'Raleway', sans-serif;
 }
@@ -9,7 +9,7 @@ body {
   top:        40px;
   text-align: center;
   font-size:  84px;
-  color:      #DDD;
+  color:      #EEE;
 }
 
 #container {
@@ -22,7 +22,7 @@ body {
   position:     absolute;
   top:          100px;
   left:         50%;
-  margin-left:  -205px;
+  margin-left:  -210px;
   width:        520px;
 }
 
@@ -47,7 +47,7 @@ body {
   position:         relative;
   height:           200px;
   width:            200px;
-  background-color: #999;
+  background-color: #383838;
   margin:           0 10px 10px 0;
 }
 
@@ -74,7 +74,7 @@ body {
   position:         relative;
   height:           240px;
   width:            200px;
-  background-color: #999;
+  background-color: #383838;
   margin:           0 10px 0 0;
 }
 
