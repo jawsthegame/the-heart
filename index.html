@@ -12,8 +12,8 @@
     <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $slider = $("#rate-slider .slider");
-        $amount = $("#amount");
+        var $slider = $("#rate-slider .slider");
+        var $amount = $("#amount");
         $slider.slider({
           orientation: "vertical",
           range: "min",
@@ -27,8 +27,13 @@
         });
         $amount.val($slider.slider("value"));
         $amount.change(function() {
-          $slider.slider("value", $amount.val());
-          updateInterval($amount.val());
+          var value = parseInt($amount.val());
+          if (value < 1 || value > 400) {
+            value = 75;
+            $amount.val(value);
+          }
+          $slider.slider("value", value);
+          updateInterval(value);
         });
 
         updateInterval($("#amount").val());
