@@ -1,0 +1,109 @@
+body {
+  background-color: #444;
+  position:         relative;
+  font-family:      'Raleway', sans-serif;
+}
+
+.title {
+  position:   relative;
+  top:        40px;
+  text-align: center;
+  font-size:  84px;
+  color:      #DDD;
+}
+
+#container {
+  position: absolute;
+  width:    100%;
+  height:   100%;
+}
+
+#row {
+  position:     absolute;
+  top:          100px;
+  left:         50%;
+  margin-left:  -205px;
+  width:        520px;
+}
+
+#row > div {
+  display: inline-block;
+}
+
+#row #heart {
+  position: relative;
+  left:     0;
+}
+
+#row #rate-slider {
+  position: absolute;
+  top:      20px;
+  right:    0;
+  width:    60px;
+}
+
+#atria > div {
+  display:          inline-block;
+  position:         relative;
+  height:           200px;
+  width:            200px;
+  background-color: #999;
+  margin:           0 10px 10px 0;
+}
+
+#atria #left {
+  -webkit-border-top-left-radius: 200px;
+  -webkit-border-top-right-radius: 250px;
+  -moz-border-radius-topleft: 200px;
+  -moz-border-radius-topright: 250px;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 250px;
+}
+
+#atria #right {
+  -webkit-border-top-left-radius: 250px;
+  -webkit-border-top-right-radius: 200px;
+  -moz-border-radius-topleft: 250px;
+  -moz-border-radius-topright: 200px;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 200px;
+}
+
+#ventricles > div {
+  display:          inline-block;
+  position:         relative;
+  height:           240px;
+  width:            200px;
+  background-color: #999;
+  margin:           0 10px 0 0;
+}
+
+#ventricles #left {
+  -webkit-border-bottom-left-radius: 800px;
+  -moz-border-radius-bottomleft: 800px;
+  border-bottom-left-radius: 800px;
+}
+
+#ventricles #right {
+  -webkit-border-bottom-right-radius: 600px;
+  -moz-border-radius-bottomright: 600px;
+  border-bottom-right-radius: 600px;
+}
+
+#rate-slider .slider {
+  height: 300px;
+}
+
+#rate-slider label {
+  color:          #f2f2f2;
+  font-size:      20px;
+  vertical-align: middle;
+}
+
+#rate-slider #amount {
+  background-color: #555;
+  height:           20px;
+  width:            32px;
+  font-size:        14px;
+  margin-top:       4px;
+}
