@@ -1,4 +1,4 @@
 the-heart
 =========
 
-heart simulator
+just a simple heart simulator.
