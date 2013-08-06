@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>the heart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5,
+      maximum-scale=0.5, user-scalable=0"/>
+    <link href='application.css' rel='stylesheet' type='text/css' />
+    <link href='css/the-heart/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="application.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+      var exports = this,
+          jQuery  = require("jqueryify");
+
+      require.define({"underscore": require.modules['underscore/underscore'],
+                      "backbone":   require.modules['backbone/backbone']});
+
+      jQuery(function(){
+        var App = require("index");
+        exports.app = new App();
+      });
+    </script>
+  </head>
+  <body>...</body>
+</html>
