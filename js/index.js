@@ -2,6 +2,15 @@ rate = 0;
 interval = null;
 pr_interval = 1.0; // for purposes of this app, 'normal' is 1.0
 
+window.addEventListener('blur', function() {
+  clearInterval(interval);
+  interval = null;
+});
+
+window.addEventListener('focus', function() {
+  if (interval == null) start();
+});
+
 function beat($la, $ra, $lv, $rv) {
   var deoxyColor  = "#A83472";
   var oxyColor    = "#D13B3B";
